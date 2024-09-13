@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- user will input the task here -->
+        <form>
+            <input type="text" placeholder="Entre com uma tarefa" id="userInput">
+            <button id="submit">Acrescentar na Lista</button>
+        </form>
+        <!-- four sections for tasks -->
+        <section id="container">
+            <section>
+                <h2 class=" h2-style gold">Em andamento</h2>
+                <ul class="tasksSection" id="inProgress"></ul>
+            </section>
+            <section>
+                <h2 class="h2-style red">Em espera</h2>
+                <ul class="tasksSection" id="hold">
+                </ul>
+            </section>
+            <section>
+                <h2 class="h2-style blue">Em revisão</h2>
+                <ul class="tasksSection" id="review"></ul>
+            </section>
+            <section>
+                <h2 class="h2-style green">Aprovado</h2>
+                <ul class="tasksSection" id="Approved"></ul>
+            </section>
+        </section>
+    </main>
+    <!-- descriptions and notes for each task -->
+    <section id="descrpContainer">
+        <section id="descrpWrapper">
+            <textarea id="description" placeholder="Enter your notes about this task"></textarea>
+            <button id="cancel">Cancel</button>
+            <button id="save">Save Changes</button>
+        </section>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/cjs/react-dom.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/cjs/react.production.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
