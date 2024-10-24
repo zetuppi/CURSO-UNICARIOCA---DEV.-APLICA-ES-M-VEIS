@@ -1,0 +1,217 @@
+/* Estilos gerais */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #FFF; /* Fundo branco */
+  margin: 0;
+  padding: 20px;
+  color: #000; /* Texto em preto */
+}
+h1 {
+  text-align: center;
+  color: #000; /* Título em preto */
+  margin-bottom: 20px;
+}
+h5 {
+  text-align: center;
+  color: #000; /* Subtítulo em preto */
+  margin-bottom: 30px;
+}
+h2 {
+  color: #000; /* Cabeçalho em preto */
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Layout da aplicação */
+.container {
+  justify-content: space-between; /* Garante que os componentes se afastem */
+  max-width: 1200px; /* Largura máxima da aplicação */
+  margin: 0 auto; /* Centraliza a aplicação */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilos de listas e itens */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Mover o display flex para o ul */
+  flex-wrap: wrap; /* Permitir que os itens quebrem para a próxima linha se necessário */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.produtos-lista li {
+  flex: 1 0 200px; /* Permitir que os itens cresçam e encolham */
+  max-width: 250px; /* Tamanho máximo para cada item */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo dentro de cada item */
+  padding: 15px;
+  background-color: #379227;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px; /* Mantenha esta margem para espaçamento entre linhas */
+}
+
+.produtos-lista,
+.carrinho-lista {
+  width: 100%;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: #379227;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+}
+
+/* Estilos da lista de produtos */
+.product-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para imagens */
+.produto-imagem {
+  width: 200px;
+  height: 200px; /* Ajuste conforme necessário */
+}
+
+.produto-preco {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Botões de ação */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #1c6eaa;
+}
+
+button.remove-btn {
+  background-color: #e74c3c;
+}
+
+button.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos do carrinho */
+.cart {
+  background-color: #FFF; /* Cor de fundo do carrinho agora é branco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra mais sutil */
+  max-width: 500px; /* Largura máxima do carrinho */
+  margin: 20px; /* Espaçamento em volta do carrinho */
+}
+
+.cart h2 {
+  color: #000; /* Título do carrinho em preto */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #666; /* Linha separadora */
+}
+
+.cart li:last-child {
+  border-bottom: none; /* Remove a linha da última item */
+}
+
+.cart .total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000; /* Texto do total em preto */
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-list, .cart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Adicionando uma animação de foco no botão */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(50, 150, 250, 0.7);
+}
+
+/* Estilos para imagens */
+img {
+  border-radius: 15px;
+}
+
+input[type="text"] {
+  width: 100px; 
+  height: 25px;
+  padding: 5px; /* Ajuste o padding se precisar */
+  border-radius: 5px; /* Arredondar bordas se desejar */
+  border: 1px solid #ccc; /* Borda mais clara */
+  background-color: #444; /* Cor de fundo para combinar com o tema */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+}
+
+input[type="number"] {
+  width: 50px; 
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #444;
+  color: white;
+  text-align: center;
+}
+
+.imagem-banner {
+  width: 100%;
+  height: auto;
+}
