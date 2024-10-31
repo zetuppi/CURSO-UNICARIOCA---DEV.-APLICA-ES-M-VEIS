@@ -1,2 +1,0 @@
-Admin: email = admin
-Senha= admin123
